@@ -1,0 +1,258 @@
+/* General Styles */
+html, body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem; /* Adjust if needed for navbar */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  z-index: 999;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #007acc;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #007acc;
+}
+
+/* Hero Section */
+.hero-home {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('images/hero-devops.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: #fff;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero-services {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('images/services.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: #fff;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.hero-about {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('images/about.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: #fff;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hero-contact {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('images/contact.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  color: #fff;
+  min-height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn .8s ease-out;
+  margin-top: 2rem;
+}
+
+/* Button */
+.btn {
+  background: #007acc;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #005fa3;
+}
+
+/* Service Cards */
+.service-overview,
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1e1e2f;
+  color: #fff;
+  margin-top: auto;
+}
+
+.site-wrapper {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contact Form */
+.contact-form-section {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-msg {
+  margin-top: 1rem;
+  color: green;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .service-overview,
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
+
+.hero-content[data-bg] {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content[data-bg]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  /* Set a default background image or remove the url() part if dynamic images are needed via JS */
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+  border-radius: inherit;
+  opacity: 1;
+  transition: background-image 0.3s;
+}

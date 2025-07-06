@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic metadata and linked assets -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us | TheDevOpsGurus</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">TheDevOpsGurus</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-services.html">Services</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main style="margin-top: 0px;">
+    <!-- Hero Section -->
+    <header class="hero-about">
+      <div class="hero-content">
+        <h1>Who We Are</h1>
+        <p>DevOps Experts on a Mission to Accelerate Cloud-First Transformation</p>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
+      <h2>About TheDevOpsGurus</h2>
+      <p>
+        TheDevOpsGurus is a consulting tech firm founded with the mission of empowering organizations to adopt
+        cutting-edge DevOps practices. We specialize in infrastructure as code, continuous integration/delivery,
+        and cost-optimized cloud environments.
+      </p>
+      <p>
+        Our multidisciplinary team brings together expertise across cloud platforms, automation tools, and
+        DevOps culture. We're driven by results, collaboration, and innovation.
+      </p>
+      <h3>Our Values</h3>
+      <ul>
+        <li>✅ Innovation-Driven Engineering</li>
+        <li>✅ Customer-Centric Approach</li>
+        <li>✅ Excellence in Execution</li>
+      </ul>
+    </section>
+
+    <!-- Team Member Section -->
+    <section class="team-section" style="padding: 4rem 2rem; max-width: 1000px; margin: auto;">
+      <h2>Meet Our Team</h2>
+      <div class="employee-cards" style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+        <!-- Employee Card 1 -->
+        <div class="employee-card" style="background:#fff; padding: 1.5rem; border-radius: 8px; width: 280px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+          <h4>Nsikakobong Ubom</h4>
+          <p>Lead DevOps Engineer</p>
+          <a href="#" onclick="showEmployeeDetail('jane')">View Profile</a>
+        </div>
+
+        <!-- Employee Card 2 -->
+        <div class="employee-card" style="background:#fff; padding: 1.5rem; border-radius: 8px; width: 280px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+          <h4>Somina Otonye</h4>
+          <p>Cloud Architect</p>
+          <a href="#" onclick="showEmployeeDetail('john')">View Profile</a>
+        </div>
+
+        <!-- Employee Card 3 -->
+        <div class="employee-card" style="background:#fff; padding: 1.5rem; border-radius: 8px; width: 280px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+          <h4>Osigah Ogedegbe</h4>
+          <p>CI/CD Specialist</p>
+          <a href="#" onclick="showEmployeeDetail('mary')">View Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Employee Detail -->
+    <div id="employeeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center;">
+      <div style="background:#fff; padding:2rem; border-radius:8px; max-width:600px; position:relative;">
+        <!-- Close Button -->
+        <button onclick="closeEmployeeModal()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem;">&times;</button>
+        <!-- Injected Dynamic Content -->
+        <div id="employeeDetail"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 TheDevOpsGurus. All rights reserved.</p>
+  </footer>
+
+  <!-- Inline Script for Team Modal (repeated in script.js too for full-page support) -->
+  <script>
+    // Employee profile data
+    const employeeProfiles = {
+      jane: `<h3>Jane Doe</h3><p>Jane leads our infrastructure automation and container orchestration efforts. She's certified in Kubernetes, AWS, and Terraform with over 8 years of experience in enterprise DevOps transformations.</p>`,
+      john: `<h3>John Smith</h3><p>John is our cloud solutions architect specializing in hybrid cloud environments. He has deployed scalable microservices architectures for banking and fintech clients globally.</p>`,
+      mary: `<h3>Mary Johnson</h3><p>Mary drives our CI/CD initiatives and ensures high-performance, secure, and reliable deployment workflows using Jenkins, GitHub Actions, and Argo CD.</p>`
+    };
+
+    // Show modal with selected employee detail
+    function showEmployeeDetail(key) {
+      document.getElementById('employeeDetail').innerHTML = employeeProfiles[key];
+      document.getElementById('employeeModal').style.display = 'flex';
+    }
+
+    // Hide the modal
+    function closeEmployeeModal() {
+      document.getElementById('employeeModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
