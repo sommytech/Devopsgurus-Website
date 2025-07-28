@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and stylesheet -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Home | TheDevOpsGurus</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <!-- Navigation bar -->
+      <nav class="navbar">
+        <div class="logo">TheDevOpsGurus</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="our-services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero section with CTA -->
+      <header class="hero-home">
+        <div class="hero-content">
+          <h1>Empower Your Cloud With Modern DevOps</h1>
+          <!-- Hero background image is set via CSS on .hero -->
+          <p>Automate. Optimize. Scale with confidence.</p>
+          <a href="contact-us.html" class="btn">Get Started</a>
+        </div>
+      </header>
+
+      <!-- Service highlights -->
+      <section class="service-overview">
+        <div class="card">
+          <img src="icons/automation.png" height="60px" alt="Automation" />
+          <h3>Infrastructure Automation</h3>
+          <p>Provision infrastructure with Terraform & Ansible.</p>
+        </div>
+        <div class="card">
+          <img src="icons/cloud.png" height="60px" alt="Cloud" />
+          <h3>Cloud Migration</h3>
+          <p>Move workloads to cloud with cost efficiency.</p>
+        </div>
+        <div class="card">
+          <img src="icons/cicd.png" height="60px" alt="CI/CD" />
+          <h3>CI/CD Pipelines</h3>
+          <p>Automate deployments with Jenkins and GitHub Actions.</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 TheDevOpsGurus. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
